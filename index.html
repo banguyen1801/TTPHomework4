@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Assignment 4</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+    </head>
+    <body>
+        <div class="nav-container">
+                <a href="#" onclick="addRow()">Add Row</a>
+                <a href="#" onclick="addCol()">Add Column</a>
+                <a href="#" onclick="deleteRow()">Delete Row</a>
+                <a href="#" onclick="deleteCol()">Delete Column</a>
+        </div>
+        <br>
+        <div class="select-color">
+            <form>
+                <label for="color">Color</label>
+                <select id="color" name="color">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Black</option>
+                </select>
+            </form>
+        </div>
+        <div class="table-container">
+            <table id="table">
+                <tr id="first-row">
+                    <td>Row1 Col1</td>    
+                </tr>
+
+            </table>
+        </div>
+    </body>
+    <script>
+    function addRow() {
+        let table = document.getElementById("table");
+        let row = table.insertRow(0);
+        let cell1 = row.insertCell(0);
+        cell1.innerHTML = "New Row";
+    }
+    function addCol() {
+        let row = document.getElementById("first-row");
+        let x = row.insertCell(0);
+        x.innerHTML = "New Col";
+    }
+    function deleteRow() {
+        document.getElementById("table").deleteRow(0);
+    }
+    function deleteCol() {
+        let row = document.getElementById("first-row");
+        row.deleteCell(0);
+    }    
+    
+    </script>
+       
+
+</html>
