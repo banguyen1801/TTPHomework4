@@ -38,3 +38,9 @@ html {
 table, td {
     border: 1px solid black;
   }
+.row, .col {
+    min-width: 3rem;
+    min-height: 1rem;
+    text-align: center;
+
+}
